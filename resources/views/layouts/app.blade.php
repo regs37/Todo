@@ -56,7 +56,7 @@
                         {{ config('app.name') }}
                     </a> -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img alt="Brand" src="...">
+                        <img alt="Brand" height="22" src="http://todoarts.com/wp-content/uploads/2016/02/TODO_Logo_black_2.png">
                     </a>
                 </div>
 
