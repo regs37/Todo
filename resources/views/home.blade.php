@@ -24,10 +24,11 @@
             </div>
         </div> -->
         <div class="col-sm-7 col-sm-offset-1">
+            <h4 class="desc">Tasks</h4>
             <div id="task-container" action="{{ route('getTask') }}"></div>
         </div>
         <div class="col-sm-3">
-            <h4 class="desc">Make Task</h4>
+            <h4 class="desc">ADD Task</h4>
             <form id="form-create-task" class="form" method="POST" action="{{ route('createTask') }}">
                 {{ csrf_field() }}
                 <div class="form-group">

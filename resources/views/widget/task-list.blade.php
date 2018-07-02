@@ -7,25 +7,35 @@
 		overflow: hidden; 
 		width: 300px;
 	}
+
+	.widget-task-list thead tr th,
+	.widget-task-list tbody tr td {
+		padding: 10px 15px;
+	}
+	.widget-task-list thead tr th {
+		padding-bottom: 5px;
+	}
 </style>
-<table class="table table-hover widget-task-list">
-	<thead>
-		<tr>
-			<th>Title</th>
-			<th>User</th>
-			<th>Date Created</th>
-		</tr>
-	</thead>
-	<tbody>
-		@foreach($tasks as $task)
+<div class="panel panel-default">
+	<table class="table table-hover widget-task-list">
+		<thead>
 			<tr>
-				<td style="width: 70%;">
-					<h4>{{ $task->title }}</h4>
-					<p><small>{{ $task->description }}</small></p>
-				</td>
-				<td>{{ $task->name }}</td>
-				<td>{{ date("M i, Y", strtotime($task->created_at)) }}</td>
+				<th>Title</th>
+				<th>User</th>
+				<th>Date Created</th>
 			</tr>
-		@endforeach
-	</tbody>
-</table>
+		</thead>
+		<tbody>
+			@foreach($tasks as $task)
+				<tr>
+					<td style="width: 70%;">
+						<h4>{{ $task->title }}</h4>
+						<p><small>{{ $task->description }}</small></p>
+					</td>
+					<td>{{ $task->name }}</td>
+					<td>{{ date("M i, Y", strtotime($task->created_at)) }}</td>
+				</tr>
+			@endforeach
+		</tbody>
+	</table>
+</div>
